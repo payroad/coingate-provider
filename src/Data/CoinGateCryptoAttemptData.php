@@ -50,6 +50,17 @@ final class CoinGateCryptoAttemptData implements CryptoAttemptData
      */
     public function getRequiredConfirmations(): int { return 1; }
 
+    /**
+     * CoinGate does not report partial payment amounts via webhook.
+     * Always returns null.
+     */
+    public function getActualPaidAmount(): ?string { return null; }
+
+    public function getPaymentUrl(): ?string { return $this->paymentUrl !== '' ? $this->paymentUrl : null; }
+
+    /** CoinGate does not use memos. Always returns null. */
+    public function getMemo(): ?string { return null; }
+
     // ── Serialisation ─────────────────────────────────────────────────────────
 
     public function toArray(): array
