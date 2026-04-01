@@ -77,7 +77,7 @@ final class CoinGateProvider implements CryptoProviderInterface
         Money                $amount,
         CryptoAttemptContext $context,
     ): CryptoPaymentAttempt {
-        $priceAmount   = bcdiv((string) $amount->getMinorAmount(), bcpow('10', (string) $amount->getCurrency()->precision, 0), $amount->getCurrency()->precision);
+        $priceAmount   = bcdiv($amount->getMinorAmountString(), bcpow('10', (string) $amount->getCurrency()->precision, 0), $amount->getCurrency()->precision);
         $priceCurrency = strtoupper($amount->getCurrency()->code);
 
         $hmacToken   = hash_hmac('sha256', (string) $id, $this->apiKey);
