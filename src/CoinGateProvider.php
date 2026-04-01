@@ -101,6 +101,7 @@ final class CoinGateProvider implements CryptoProviderInterface
 
         $attempt = CryptoPaymentAttempt::create($id, $paymentId, $providerName, $amount, $data);
         $attempt->setProviderReference((string) $response['id']);
+        $attempt->markAwaitingConfirmation('new');
 
         return $attempt;
     }
