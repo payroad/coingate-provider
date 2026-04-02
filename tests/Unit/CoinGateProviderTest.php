@@ -9,7 +9,7 @@ use Payroad\Domain\Attempt\PaymentAttemptId;
 use Payroad\Domain\Money\Currency;
 use Payroad\Domain\Money\Money;
 use Payroad\Domain\Payment\PaymentId;
-use Payroad\Domain\PaymentFlow\Crypto\CryptoPaymentAttempt;
+use Payroad\Domain\Channel\Crypto\CryptoPaymentAttempt;
 use Payroad\Domain\Refund\RefundId;
 use Payroad\Port\Provider\Crypto\CryptoAttemptContext;
 use Payroad\Port\Provider\Crypto\CryptoRefundContext;

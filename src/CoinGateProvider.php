@@ -7,7 +7,7 @@ namespace Payroad\Provider\CoinGate;
 use Payroad\Domain\Attempt\PaymentAttemptId;
 use Payroad\Domain\Money\Money;
 use Payroad\Domain\Payment\PaymentId;
-use Payroad\Domain\PaymentFlow\Crypto\CryptoPaymentAttempt;
+use Payroad\Domain\Channel\Crypto\CryptoPaymentAttempt;
 use Payroad\Port\Provider\Crypto\CryptoAttemptContext;
 use Payroad\Port\Provider\Crypto\CryptoProviderInterface;
 use Payroad\Port\Provider\WebhookEvent;
